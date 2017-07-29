@@ -1,0 +1,115 @@
+body {
+    font-family: '微软雅黑';
+    font-weight: 300;
+    line-height: 1.4em;
+    color: #a7a1ae;
+    background-color: #1f2739;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+/* 标题部分 */
+
+h1 {
+    padding: 100px 0 100px 0;
+    font-size: 3em;
+    font-weight: 200;
+    text-align: center;
+    color: #4dc3fa;
+}
+
+
+/* 主体部分 */
+
+.item {
+    width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+input {
+    display: none;
+}
+
+label {
+    float: left;
+    display: block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #185875;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+label:hover {
+    background-color: #fff842;
+    -webkit-box-shadow: #7f7c21 -1px 1px, #7f7c21 -2px 2px, #7f7c21 -3px 3px, #7f7c21 -4px 4px, #7f7c21 -5px 5px, #7f7c21 -6px 6px;
+            box-shadow: #7f7c21 -1px 1px, #7f7c21 -2px 2px, #7f7c21 -3px 3px, #7f7c21 -4px 4px, #7f7c21 -5px 5px, #7f7c21 -6px 6px;
+    -webkit-transform: translate3d(6px, -6px, 0);
+            transform: translate3d(6px, -6px, 0);
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+    -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-timing-function: line;
+            transition-timing-function: line;
+}
+
+.tab {
+    width: 700px;
+    display: none;
+    position: absolute;
+    top: 40px;
+    text-align: center;
+    overflow: auto;
+}
+
+
+td, th {
+    height: 30px;
+    background-color: #323c50;
+}
+
+th {
+    font-weight: 500;
+    color: #FB667A;
+}
+
+td {
+    padding: 0 20px 0 20px;
+}
+
+[id^='tab1']:checked~.tab1 {
+    display: table;
+}
+
+[id^='tab2']:checked~.tab2 {
+    display: table;
+}
+
+[id^='tab3']:checked~.tab3 {
+    display: table;
+}
+
+[id^='tab4']:checked~.tab4 {
+    display: table;
+}
+
+[id^='tab5']:checked~.tab5 {
+    display: table;
+}
+
+[id^='tab6']:checked~.tab6 {
+    display: table;
+}
+
+[id^='tab7']:checked~.tab7 {
+    display: table;
+}
