@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nav task</title>
+    <style media="screen">
+        *{
+            margin:0;
+            padding: 0;
+        }
+        nav{
+            margin: 10px auto;
+            width: 600px;
+        }
+        ul{
+            color: #000;
+            background-color: #eee;
+            border-radius: 3px;
+            box-shadow: 0 2px 4px #a1a1a1, 0 2px 10px #f1f1f1;
+            list-style-type: none;
+        }
+        li{
+            display: inline-block;
+            position: relative;
+        }
+        a{
+            text-decoration: none;
+        }
+        /*a 标签样式的通用部分*/
+        .tag{
+            display: block;
+            padding: 8px 16px;
+            color: #000;
+        }
+        li:first-child > a{
+            border-radius: 3px 0 0 3px;
+        }
+        .tag:hover{
+            background-color: #ccc;
+            -webkit-transition:background-color .5s ease-in-out;
+            transition:background-color .5s ease-in-out;
+        }
+
+        /*鼠标悬停出现*/
+        .tag-more{
+            display: none;
+        }
+        li:nth-child(3):hover .tag-more{
+            display: block;
+        }
+        .tag-more{
+            position: absolute;
+            top:100%;
+            left: 0;
+            width: 160px;
+            color: #000;
+            background-color: #fff;
+            box-shadow: 0 2px 4px #a1a1a1, 0 2px 10px #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>
+                <a class="tag" href="#">首页</a>
+            </li>
+            <li>
+                <a class="tag" href="#">作品</a>
+            </li>
+            <li>
+                <a class="tag" href="#">更多</a>
+                <div class="tag-more">
+                    <a class="tag" href="#">Github</a>
+                    <a class="tag" href="#">Blog</a>
+                    <a class="tag" href="#">Zhihu</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+
+
+</body>
+</html>
