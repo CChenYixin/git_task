@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style media="screen">
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .intro{
+            width: 600px;
+            height: 480px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        h2{
+            padding: 15px;
+            color: #fff;
+            background-color: #009688;
+        }
+
+        form >div{
+            margin-top: 10px;
+        }
+        form{
+            padding: 15px;
+        }
+        label{
+            color: #757575;
+        }
+        input{
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            border: none;
+            border-bottom: 1px solid #808080;
+        }
+        textarea{
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 1px solid #808080;
+        }
+        .left{
+            float: left;
+            width: 50%;
+        }
+        .right{
+            float: right;
+            width: 50%;
+        }
+        .left > input,.right > input{
+            display: inline-block;
+            width: auto;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        button{
+            margin-top: 20px;
+            padding: 8px 16px;
+            color: #fff;
+            background-color: #009688;
+            border: none;
+            border-radius: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="intro">
+        <h2>信息收集表</h2>
+        <form class="form" action="index.html" method="post">
+        <div>
+            <label for="name">姓名</label>
+            <input type="text" id="name" name="name" value="">
+        </div>
+        <div>
+            <label for="qq">QQ</label>
+            <input type="text" id="qq" name="qq" value="">
+        </div>
+        <div>
+            <label for="words">要说的话</label>
+            <textarea  id="words" name="name" rows="4" cols="30"></textarea>
+        </div>
+        <div class="clearfix">
+            <div class="left">
+                <input id="milk" name="drinks" type="checkbox" checked="checked">
+                <label for="milk">Milk</label>
+                <br>
+                <input id="sugar" name="drinks" type="checkbox">
+                <label for="sugar">Sugar</label>
+                <br>
+                <input id="lemon" name="drinks" type="checkbox">
+                <label for="lemon">Lemon</label>
+            </div>
+            <div class="right">
+                <input id="male" type="radio" name="gender" value="male" checked="">
+                <label for="male">Male</label>
+                <br>
+                <input id="female" type="radio" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+        </div>
+        <div >
+            <button type="submit" name="button">提交</button>
+        </div>
+        </form>
+    </div>
+
+</body>
+</html>
