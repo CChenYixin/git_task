@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style media="screen">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            padding: 200px;
+        }
+        .float-left{
+            float: left;
+            width: 200px;
+            height: 700px;
+            border: 1px solid black;
+        }
+        .float-right{
+            float: right;
+            width: 200px;
+            height: 500px;
+            border: 1px solid black;
+        }
+        .main{
+            margin-left: 250px;
+            margin-right: 250px;
+            border: 1px solid black;
+            min-width: 500px;
+            height: calc(100vh - 20px);
+        }
+
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    <section class="float-left">
+        <span>左浮动</span>
+    </section>
+    <section class="float-right">
+        <span>右浮动</span>
+    </section>
+    <section class="main">
+        <span>自适应</span>
+    </section>
+</body>
+</html>

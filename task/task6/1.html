@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style media="screen">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            width: 960px;
+            margin: 20px auto;
+        }
+        ul{
+            list-style-type: none;
+            padding: 5px 10px;
+            border: 1px solid black;
+        }
+        .one{
+            text-align: center;
+            font-size: 0;
+        }
+        .one > li{
+            display: inline-block;
+            padding: 5px 10px;
+            border: 1px solid black;
+            font-size: 16px;
+        }
+        .two{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .two > li{
+            display: inline-block;
+            padding: 5px 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span>方法一</span>
+        <ul class="one">
+            <li>inline-block</li>
+            <li>inline-block</li>
+        </ul>
+    </header>
+    <header>
+        <span>方法二</span>
+        <ul class="two">
+            <li>flex</li>
+            <li>flex</li>
+        </ul>
+    </header>
+</body>
+</html>
