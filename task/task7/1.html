@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style media="screen">
+        *{
+            margin:0;
+            padding:0;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        body{
+            padding: 30px;
+        }
+        .inline-middle-1{
+            height: 100px;
+            line-height: 100px;
+            word-spacing: nowrap;
+        }
+        .inline-middle-2{
+            height: 100px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        .inline-middle-3{
+            display: table-cell;
+            vertical-align: middle;
+            width: 150px;
+            height: 300px;
+        }
+        .inline-middle-4{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 150px;
+            height: 300px;
+        }
+        .inline-middle-5{
+            width: 150px;
+            height: 300px;
+        }
+        .inline-middle-5::before{
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 1%;
+            vertical-align: middle;
+        }
+        .inline-middle-5 p {
+            width: 120px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .block-middle-1{
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+        .box1{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            margin-top: -50px;
+            color: #fff;
+            background-color: #000;
+        }
+        .block-middle-2{
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+        .box2{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            background-color: #000;
+        }
+        .block-middle-3{
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            color: #fff;
+            background-color: #000;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>内联元素垂直居中</h1>
+    <span class="inline-middle-1">单行内联垂直居中1</span>
+    <span class="inline-middle-2">单行内联垂直居中2</span>
+    <div class="inline-middle-3">
+        <p>多行文本垂直居中3多行文本垂直居中3多行文本垂直居中3多行文本垂直居中3</p>
+    </div>
+    <div class="inline-middle-4">
+        <p>多行文本垂直居中4多行文本垂直居中4多行文本垂直居中4多行文本垂直居中4</p>
+    </div>
+    <div class="inline-middle-5">
+        <p>多行文本垂直居中5多行文本垂直居中5多行文本垂直居中5多行文本垂直居中5</p>
+    </div>
+
+    <h1>块级元素垂直居中</h1>
+
+    <div class="block-middle-1">
+        <div class="box1">块级元素垂直居中1</div>
+    </div>
+    <div class="block-middle-2">
+        <div class="box2">块级元素垂直居中2</div>
+    </div>
+    <div class="block-middle-3">
+        <div class="box3">块级元素垂直居中3</div>
+    </div>
+</body>
+</html>
