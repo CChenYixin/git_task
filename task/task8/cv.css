@@ -15,11 +15,6 @@ body{
     display: table;
     clear: both;
 }
-.clearfix::before{
-    content: "";
-    display: table;
-    clear: both;
-}
 
 .middle{
     position: absolute;
@@ -132,7 +127,7 @@ hr{
     position: relative;
     display: inline-block;
     left: 0;
-    width: 50%;
+    width: 80%;
     height: 2px;
     border: none;
     background-color: #888;
@@ -169,28 +164,33 @@ section:nth-child(4){
 
 .activite{
     width: 50%;
-    margin-left: 50px;
 }
 .activite p,.activite h3{
     margin: 5px 0;
     line-height: 1.5em;
     text-align: justify;
     font-weight: 400;
+    margin-left: 50px;
 }
 .activite p{
     font-size: 14px;
+
 }
 .activite h3{
     font-size: 16px;
 }
 .skill{
+    float: right;
     width: 50%;
-    margin-left: 400px;
+    padding-left: 50px;
+}
+.skill p,.skill h2{
+    margin-top: 0;
 }
 
 ul{
     list-style-type: none;
-    padding-left: 100px;
+
     margin-top: 20px;
 }
 li{
