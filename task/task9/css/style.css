@@ -288,7 +288,7 @@ button:hover{
     padding: 100px 0;
     width: 100%;
     text-align: center;
-    background-color: #000;
+    background: url("../images/100.jpg") center no-repeat;
 }
 
 .section4 > h3{
@@ -350,6 +350,8 @@ footer{
     padding: 20px 0;
     height: 50px;
     line-height: 50px;
+    color: #fff;
+    background-color: #000;
 }
 footer .copyright{
     float: left;
