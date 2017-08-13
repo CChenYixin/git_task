@@ -129,8 +129,10 @@ button:hover{
     width: 200px;
     transition: width .7s ease-in-out;
 }
-.section1 > div{
+
+.section1-main > div{
     float: left;
+    display: inline-block;
     margin-top: 50px;
     padding: 0 100px;
     box-sizing: border-box;
@@ -138,7 +140,7 @@ button:hover{
 }
 
 .news >img{
-    width: 400px;
+    max-width: 400px;
     height: 200px;
     border-radius: 5px;
 }
