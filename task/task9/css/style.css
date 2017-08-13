@@ -22,10 +22,11 @@ body{
 /*导航样式*/
 
 nav{
+    float: left;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-
+    width: 100%;
     margin-top: 20px;
     padding: 20px 0;
     color: #fff;
@@ -58,14 +59,15 @@ nav{
 /*header样式*/
 
 header{
-    margin-top: -120px;
     padding: 300px 0;
 
+    width: 100%;
     letter-spacing: 5px;
     text-align: center;
     background-image: url("../images/1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .slogan1{
@@ -100,6 +102,7 @@ button:hover{
 /*section1部分*/
 
 .section1{
+    width: 100%;
     padding: 100px 0;
     text-align: center;
     background-color: #fff;
@@ -129,23 +132,19 @@ button:hover{
     width: 200px;
     transition: width .7s ease-in-out;
 }
-
+.section1-main{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 .section1-main > div{
-    float: left;
-    display: inline-block;
     margin-top: 50px;
-    padding: 0 100px;
     box-sizing: border-box;
-    width: 33%;
+    width: 25%;
 }
-
 .news >img{
-    max-width: 400px;
-    height: 200px;
+    width: 100%;
     border-radius: 5px;
-}
-.news > p,.news > h4{
-    min-width: 400px;
 }
 .news > p{
     color: #666;
@@ -156,7 +155,7 @@ button:hover{
 
 .section2{
     padding: 100px 0;
-    width: 100%;
+    /*width: 100%;*/
     text-align: center;
     background-color: #eee;
 }
@@ -170,7 +169,7 @@ button:hover{
     justify-content: center;
     flex-wrap: wrap;
 
-    width: 1350px;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -189,6 +188,8 @@ button:hover{
     position: relative;
     z-index: 5;
     background-color: rgb(254, 209, 54);
+    width: 350px;
+    height: 220px;
 }
 .imgs:hover > img {
     opacity: 0.1;
@@ -196,8 +197,8 @@ button:hover{
 }
 .imgs > img{
     vertical-align: bottom;
-    width: 350px;
-    height: 220px;
+    width: 100%;
+    height: 100%;
 }
 .imgs>i {
     position: absolute;
@@ -230,6 +231,7 @@ button:hover{
     width: 100%;
     text-align: center;
     background-color: #fff;
+    overflow: hidden;
 }
 
 .section3 > h3{
@@ -328,6 +330,7 @@ button:hover{
     width: 40%;
     margin-right: 50px;
 }
+
 .left input{
     display: block;
     width: 100%;
@@ -365,17 +368,18 @@ button:hover{
     transition: all .2s ease-in;
 }
 
+
 footer{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding: 20px 0;
-    height: 50px;
-    line-height: 50px;
     color: #fff;
     background-color: #000;
 }
 footer > div{
-    width: 200px;
+    width: 300px;
+    text-align: center;
 }
 footer .copyright{
     font-size: 14px;
