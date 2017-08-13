@@ -171,6 +171,7 @@ button:hover{
     width: 1350px;
     margin: 0 auto;
 }
+
 .best{
     float: left;
     margin: 30px 50px 50px;
@@ -182,13 +183,31 @@ button:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 25px 0 rgba(0, 0, 0, 0.19);
     transition: all .3s ease-in-out;
 }
-
-.best > img{
+.imgs{
+    position: relative;
+    z-index: 5;
+    background-color: rgb(254, 209, 54);
+}
+.imgs:hover > img {
+    background-color: rgb(254, 209, 54,0.9);
+    opacity: 0.1;
+    transition: all 0.5s ease;
+}
+.imgs > img{
+    vertical-align: bottom;
     width: 350px;
     height: 200px;
 }
-.best > img:hover{
-    opacity: .8;
+.imgs>i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+.imgs:hover >i{
+    opacity: 1;
+    color: #fff;
 }
 .best > div{
     color: #666;
@@ -346,20 +365,21 @@ button:hover{
 }
 
 footer{
-    position: relative;
+    display: flex;
+    justify-content: space-around;
     padding: 20px 0;
     height: 50px;
     line-height: 50px;
     color: #fff;
     background-color: #000;
 }
+footer > div{
+    width: 200px;
+}
 footer .copyright{
-    float: left;
-    margin-left: 20%;
     font-size: 14px;
 }
 footer .contacts{
-    margin-left: 250px;
     font-size: 14px;
 }
 footer .contacts:hover{
@@ -368,11 +388,11 @@ footer .contacts:hover{
     transition: all .3s ease;
 }
 footer ul{
-    float: left;
-    margin-left: 250px;
+    text-align: center;
 }
 footer li{
     display: inline-block;
+
 }
 footer li a{
     display: block;
