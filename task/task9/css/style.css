@@ -45,8 +45,8 @@ nav{
 .nav-content{
     float: right;
     padding: 20px 0;
-    text-align: right;
     margin-right: 100px;
+    text-align: right;    
 }
 .nav-content li{
     display: inline-block;
