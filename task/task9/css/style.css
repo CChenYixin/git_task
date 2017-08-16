@@ -17,7 +17,11 @@ body{
     display: table;
     clear: both;
 }
-
+.section{
+    width: 100%;
+    padding: 100px 0;
+    text-align: center;
+}
 
 /*导航样式*/
 
@@ -28,21 +32,25 @@ nav{
     top: 0;
     width: 100%;
     margin-top: 20px;
-    padding: 20px 0;
     color: #fff;
     background-color: rgba(0, 0, 0, .2);
     z-index: 100;
 }
+
 .logo{
     float: left;
+    padding: 15px 0;
     margin-left: 12%;
 }
 .nav-content{
+    float: right;
+    padding: 20px 0;
     text-align: right;
     margin-right: 100px;
 }
 .nav-content li{
     display: inline-block;
+    vertical-align: middle;
 }
 .nav-content a{
     display: block;
@@ -70,15 +78,15 @@ header{
     background-position: center;
 }
 
-.slogan1{
+.slogan{
     color: #fff;
-    font-size: 30px;
     font-weight: 600;
 }
+.slogan1{
+    font-size: 30px;
+}
 .slogan2{
-    color: #fff;
     font-size: 60px;
-    font-weight: 600;
 }
 
 button{
@@ -102,9 +110,6 @@ button:hover{
 /*section1部分*/
 
 .section1{
-    width: 100%;
-    padding: 100px 0;
-    text-align: center;
     background-color: #fff;
 }
 .section1 > h3,.section1 > p{
@@ -154,9 +159,6 @@ button:hover{
 /*section2部分*/
 
 .section2{
-    padding: 100px 0;
-    /*width: 100%;*/
-    text-align: center;
     background-color: #eee;
 }
 .section2 > h3{
@@ -227,9 +229,6 @@ button:hover{
 /*section3部分*/
 
 .section3{
-    padding: 100px 0;
-    width: 100%;
-    text-align: center;
     background-color: #fff;
     overflow: hidden;
 }
@@ -307,9 +306,6 @@ button:hover{
 
 /*section4部分*/
 .section4{
-    padding: 100px 0;
-    width: 100%;
-    text-align: center;
     background: url("../images/100.jpg") center no-repeat;
 }
 
@@ -322,20 +318,20 @@ button:hover{
 }
 
 .form-content{
-    width: 1000px;
+    width: 60%;
     margin: 0 auto 100px;
 }
-.left{
+.left,.right{
     float: left;
-    width: 40%;
-    margin-right: 50px;
+    width: 46%;
+    padding: 0 2%;
 }
 
 .left input{
     display: block;
-    width: 100%;
-    padding: 20px;
-    margin-bottom: 20px;
+    width: 88%;
+    padding:20px;
+    margin-bottom: 10px;
 
     color: #555;
     font-weight: 600;
@@ -344,28 +340,17 @@ button:hover{
     border-radius: 5px;
 }
 .right .text{
+    width: 90%;
+    height: 155px;
     padding: 20px;
     color: #555;
     font-weight: 600;
     border-radius: 5px;
 }
-
 .submit{
-    padding: 20px 40px;
-    width: 400px;
-
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 5px;
-    color: #fff;
-    background-color: #fed136;
-    border:none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.submit:hover{
-    background-color: #fec503;
-    transition: all .2s ease-in;
+    margin: 3% auto;
+    width: 30%;
+    text-align: center;
 }
 
 
