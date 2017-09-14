@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style media="screen">
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        li{
+            list-style-type: none;
+        }
+
+        .clearfix:after{
+            content:'';
+            display: block;
+            clear: both;
+        }
+
+        body{
+            background-color: #d64a4b;
+        }
+
+        .tab{
+            margin: 20px auto;
+            width: 600px;
+        }
+
+        .tab-header > li{
+            float: left;
+            width:33.33%;
+
+            padding: 20px 30px;
+
+            color:#fff;
+            background-color: #d64a4b;
+            border-radius: 5px 5px 0 0;
+            text-align: center;
+            cursor: pointer;
+        }
+        .tab-header >.active{
+            color:#333;
+            background-color: #fff;
+            transition: all .8s ease-in-out;
+
+        }
+
+        .tab-content{
+            height: 500px;
+            padding: 20px 30px;
+            background-color: #fff;
+            border-radius: 0 0 5px 5px;
+        }
+        .tab-content >li{
+            display: none;
+        }
+        .tab-content >.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <ul class="tab-header clearfix">
+            <li class="active">选项一</li>
+            <li>选项二</li>
+            <li>选项三</li>
+        </ul>
+        <ul class="tab-content">
+            <li class="active">你</li>
+            <li>好</li>
+            <li>呀</li>
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+
+        var tabHeader = document.getElementsByClassName('tab-header')[0];
+
+        var tabLis = document.querySelectorAll('.tab-header > li'),
+            tabContents = document.querySelectorAll('.tab-content > li');
+
+        function tabSwitch(event) {
+            var  clickNode = event.target;
+            if(clickNode.tagName.toLowerCase() === 'li'){
+                for(var i =0;i<tabLis.length;i++){
+                    tabLis[i].classList.remove('active');
+                }
+                clickNode.classList.add('active');
+
+                var index = [].indexOf.call(tabLis, clickNode);
+                // console.log(tabLis);
+                // console.log(clickNode);
+                // console.log(index);
+                for (var i = 0; i < tabContents.length; i++) {
+                    tabContents[i].classList.remove('active');
+                }
+                tabContents[index].classList.add('active');
+            }
+        }
+
+
+        tabHeader.addEventListener('click',tabSwitch);
+    </script>
+
+</body>
+</html>
