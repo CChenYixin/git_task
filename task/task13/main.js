@@ -16,12 +16,12 @@ login.addEventListener('click', function(e) {
 flipModal.addEventListener('click', function(e) {
     e.stopPropagation();
     if (e.target.classList.contains('login')) {
-        // console.log(1);
+        console.log(1);
         flipModal.classList.remove('register');
         flipModal.classList.add('login');
     }
     if (e.target.classList.contains('register')) {
-        // console.log(2);
+        console.log(2);
         flipModal.classList.add('register');
         flipModal.classList.remove('login');
     }
@@ -29,7 +29,7 @@ flipModal.addEventListener('click', function(e) {
     // console.log(this);
     // window.target = e.target;
     if (e.target.classList.contains('close')) {
-        // console.log(3);
+        console.log(3);
         flipModal.classList.remove('show');
     }
 });
