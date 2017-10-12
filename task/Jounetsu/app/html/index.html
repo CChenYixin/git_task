@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Chen Yixin">
+    <!-- The author's WeChat：beilinjia -->
+    <meta name="description" content="Jounetsu 是一款简单实用又漂亮的音乐播放器，正处于开发阶段，功能有待完善。">
+    <meta name="keywords" content="music player,音乐播放器,FM">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="robots" content="index,follow">
+
+    <title>Jounetsu Music Player</title>
+
+
+    <!-- Site CSS -->
+    <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <div class="music">
+        <div class="panel-header">
+            <div class="search">
+                <a href="#"><i class="fa fa-search"></i></a>
+                <input type="search" placeholder="Search music...">
+            </div>
+            <div class="user">
+                <a class="user-icon" href="#"><img src="../images/1.jpg" alt="头像"></a>
+                <span class="user-name">Chen Yixin</span>
+                <span class="user-vip">VIP</span>
+            </div>
+        </div>
+
+        <div class="panel-main">
+            <div class="music-img">
+                <div class="musician center-vertical">
+                    <h2>Ed Sheeran</h2>
+                    <p>8,213,559 listeners a month</p>
+                </div>
+                <div class="buttons center-vertical">
+                    <button type="button" name="button">Play</button>
+                    <button type="button" name="button">Follow</button>
+                    <button type="button" name="button">···</button>
+                </div>
+            </div>
+            <div class="music-info clear-fix">
+                <div class="music-nav">
+                    <ul class="music-list">
+                        <li><i class="iconfont">&#xe614;</i><span>YOUR ZONE</span></li>
+                        <li><i class="iconfont">&#xe602;</i><span>BROWSE</span></li>
+                        <li><i class="iconfont">&#xe68c;</i><span>RADIO FM</span></li>
+                        <li><i class="iconfont">&#xe841;</i><span>PLAYLISTS</span></li>
+                        <li><i class="iconfont">&#xe622;</i><span>FEATURED</span></li>
+                    </ul>
+                    <div class="cut-line">
+                        <span>QUEUE</span>
+                    </div>
+                    <ul class="music-queue">
+                        <li>
+                            <p>Despacito(Remix)</p>
+                            <span>Justin Bieber</span>
+                        </li>
+                        <li>
+                            <p>Yellow</p>
+                            <span>Coldlay</span>
+                        </li>
+                    </ul>
+                    <div class="music-volume">
+                        <div class="volume-icon">
+                            <i class="iconfont">&#xe62f;</i>
+                        </div>
+                        <div class="volume-bar">
+                            <div class="volume-total"></div>
+                            <div class="volume-now"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-layout">
+                    <div class="lyric">
+                        <h3>MUSIC LYRIC</h3>
+                        <div class="lyric-area">
+                        </div>
+                    </div>
+                    <div class="music-recommend">
+                        <h3>Recommended Albums</h3>
+                        <ul>
+                            <li>
+                                <div class="images">
+                                    <a href="#">
+                                        <img src="../images/11.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="images-info">
+                                    <p>Bloodstream</p>
+                                    <p>Ed Sheeran</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="images">
+                                    <a href="#">
+                                        <img src="../images/12.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="images-info">
+                                    <p>Everglow</p>
+                                    <p>Coldplay</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="images">
+                                    <a href="#">
+                                        <img src="../images/13.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="images-info">
+                                    <p>Drive By</p>
+                                    <p>Train</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="images">
+                                    <a href="#">
+                                        <img src="../images/14.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="images-info">
+                                    <p>See You Again</p>
+                                    <p>Wiz Khalifa</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="images">
+                                    <a href="#">
+                                        <img src="../images/15.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="images-info">
+                                    <p>Wonderful U</p>
+                                    <p>AGA</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="images">
+                                    <a href="#">
+                                        <img src="../images/16.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="images-info">
+                                    <p>Demons</p>
+                                    <p>Boyce Avenue</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-foot">
+            <div class="play-info">
+                <div class="song-img">
+                    <img src="../images/17.png" alt="">
+                </div>
+                <div class="song center-vertical">
+                    <p class="song-name">photograph</p>
+                    <p class="song-author">ed sheeran</p>
+                </div>
+            </div>
+            <div class="play-state">
+                <div class="progress-bar">
+                    <div class="progress-total center-vertical"></div>
+                    <div class="progress-now center-vertical"></div>
+                </div>
+                <div class="time center-vertical">
+                    <span class="time-now">01:55</span>
+                    <span>/</span>
+                    <span class="time-total">05:39</span>
+                </div>
+                <div class="song-icon center-vertical">
+                    <i class="iconfont">&#xe600;</i>
+                    <i class="iconfont">&#xe601;</i>
+                    <i class="iconfont">&#xe768;</i>
+                    <i class="iconfont">&#xe606;</i>
+                    <i class="iconfont">&#xe662;</i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
