@@ -11,7 +11,7 @@ function $(selector){
  */
 
 ajax({
-    url:'http://chenyixin.com:8080/html/music.json',
+    url:'/html/music.json',
     type:'GET',
     data:{
         name:'chenyixin'
