@@ -91,8 +91,8 @@
                     </div>
                     <div class="music-recommend">
                         <h3>Recommended Albums</h3>
-                        <ul>
-                            <li>
+                        <ul class="albums-box">
+                            <li class="albums">
                                 <div class="images">
                                     <a href="#">
                                         <img src="../images/11.jpg" alt="">
@@ -103,7 +103,7 @@
                                     <p>Ed Sheeran</p>
                                 </div>
                             </li>
-                            <li>
+                            <li class="albums">
                                 <div class="images">
                                     <a href="#">
                                         <img src="../images/12.jpg" alt="">
@@ -114,7 +114,7 @@
                                     <p>Coldplay</p>
                                 </div>
                             </li>
-                            <li>
+                            <li class="albums">
                                 <div class="images">
                                     <a href="#">
                                         <img src="../images/13.jpg" alt="">
@@ -125,7 +125,7 @@
                                     <p>Train</p>
                                 </div>
                             </li>
-                            <li>
+                            <li class="albums">
                                 <div class="images">
                                     <a href="#">
                                         <img src="../images/14.jpg" alt="">
@@ -136,7 +136,7 @@
                                     <p>Wiz Khalifa</p>
                                 </div>
                             </li>
-                            <li>
+                            <li class="albums">
                                 <div class="images">
                                     <a href="#">
                                         <img src="../images/15.jpg" alt="">
@@ -147,7 +147,7 @@
                                     <p>AGA</p>
                                 </div>
                             </li>
-                            <li>
+                            <li class="albums">
                                 <div class="images">
                                     <a href="#">
                                         <img src="../images/16.jpg" alt="">
@@ -166,8 +166,8 @@
 
         <div class="panel-foot">
             <div class="play-info">
-                <div class="song-img">
-                    <img src="../images/17.png" alt="">
+                <div class="song-img-div">
+                    <img class="song-img" src="../images/17.png" alt="">
                 </div>
                 <div class="song center-vertical">
                     <p class="song-name">photograph</p>
@@ -180,19 +180,28 @@
                     <div class="progress-now center-vertical"></div>
                 </div>
                 <div class="time center-vertical">
-                    <span class="time-now">01:55</span>
+                    <span class="time-now">00:00</span>
                     <span>/</span>
-                    <span class="time-total">05:39</span>
+                    <span class="time-total">00:00</span>
                 </div>
                 <div class="song-icon center-vertical">
-                    <i class="iconfont">&#xe600;</i>
-                    <i class="iconfont">&#xe601;</i>
-                    <i class="iconfont">&#xe768;</i>
-                    <i class="iconfont">&#xe606;</i>
-                    <i class="iconfont">&#xe662;</i>
+                    <i class="randomBtn iconfont">&#xe600;</i>
+                    <i class="prevBtn iconfont">&#xe601;</i>
+                    <i class="playBtn playStatus iconfont">&#xe768;</i>
+                    <i class="nextBtn iconfont">&#xe606;</i>
+                    <i class="loopBtn iconfont">&#xe662;</i>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+    <script src="../js/ajax.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
