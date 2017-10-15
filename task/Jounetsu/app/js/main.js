@@ -11,7 +11,11 @@ function $(selector){
  */
 
 ajax({
+<<<<<<< HEAD
     url:'http://chenyixin.com:8080/html/music.json',
+=======
+    url:'/html/music.json',
+>>>>>>> gh-pages
     type:'GET',
     data:{
         name:'chenyixin'
