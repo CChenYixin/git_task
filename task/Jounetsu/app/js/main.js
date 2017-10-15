@@ -9,28 +9,37 @@ function $(selector){
 /**
  * 对封装好的ajax进行调用
  */
+// ajax({
+//     url:'/html/music.json',
+//     type:'GET',
+//     // data:{
+//     //     name:'chenyixin'
+//     // },
+//     dataType:'JSON',
+//     async:true,
+//     success:function(response,xml){
+//         console.log(JSON.parse(response));
+//         var list = JSON.parse(response);
+//         getMusicList(list);
+//     },
+//     fail:function(status){
+//         console.log('获取数据失败，状态码为'+status);
+//     }
+// });
 
-ajax({
-<<<<<<< HEAD
-    url:'http://chenyixin.com:8080/html/music.json',
-=======
-    url:'/html/music.json',
->>>>>>> gh-pages
-    type:'GET',
-    data:{
-        name:'chenyixin'
-    },
-    dataType:'JSON',
-    async:true,
-    success:function(response,xml){
-        console.log(JSON.parse(response));
-        var list = JSON.parse(response);
+var xhr = new XMLHttpRequest();
+xhr.open('get', '/html/music.json', true);
+xhr.send();
+xhr.onload = function() {
+    if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+        var list = JSON.parse(xhr.responseText);
         getMusicList(list);
-    },
-    fail:function(status){
-        console.log('获取数据失败，状态码为'+status);
+    }else{
+        console.log('获取数据失败!');
     }
-});
+};
+
+
 
 var musicList = [];
 var currentIndex = 0;
