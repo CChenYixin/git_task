@@ -11,7 +11,7 @@ function $(selector){
  */
 
 var xhr = new XMLHttpRequest();
-xhr.open('get', '/html/music.json', true);
+xhr.open('get', 'http://chenyixin.win/git_task/task/Jounetsu/app/html/music.json', true);
 xhr.send();
 xhr.onload = function() {
     if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
