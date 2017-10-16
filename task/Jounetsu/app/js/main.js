@@ -9,26 +9,9 @@ function $(selector){
 /**
  * 对封装好的ajax进行调用
  */
-// ajax({
-//     url:'/html/music.json',
-//     type:'GET',
-//     // data:{
-//     //     name:'chenyixin'
-//     // },
-//     dataType:'JSON',
-//     async:true,
-//     success:function(response,xml){
-//         console.log(JSON.parse(response));
-//         var list = JSON.parse(response);
-//         getMusicList(list);
-//     },
-//     fail:function(status){
-//         console.log('获取数据失败，状态码为'+status);
-//     }
-// });
 
 var xhr = new XMLHttpRequest();
-xhr.open('get', 'http://chenyixin.win/git_task/task/Jounetsu/app/html/index.html', true);
+xhr.open('get', 'http://chenyixin.win/git_task/task/Jounetsu/app/html/music.json', true);
 xhr.send();
 xhr.onload = function() {
     if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
@@ -39,14 +22,11 @@ xhr.onload = function() {
     }
 };
 
-
-
 var musicList = [];
 var currentIndex = 0;
 var clock;
 var audio = new Audio();
 audio.autoplay = true;
-
 
 
 /**
