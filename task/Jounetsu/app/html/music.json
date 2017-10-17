@@ -3,7 +3,7 @@
   "title": "Photograph",
   "author": "Ed sheeran",
   "img": "../images/17.png",
-  "lyric":"../lyric/Photograph.lrc",
+  "lyric":"/lyric/Photograph.lrc",
   "time":"04:19"
 },
 {
@@ -11,7 +11,7 @@
     "title": "Bloodstream",
     "author": "Ed sheeran",
     "img": "../images/11.jpg",
-    "lyric":"../lyric/Bloodstream.lrc",
+    "lyric":"/lyric/Bloodstream.lrc",
     "time":"05:00"
 },
 {
@@ -19,7 +19,7 @@
     "title": "Demons",
     "author": "Boyce Avenue",
     "img": "../images/12.jpg",
-    "lyric":"../lyric/Demons.lrc",
+    "lyric":"/lyric/Demons.lrc",
     "time":"02:54"
 },
 {
@@ -27,7 +27,7 @@
     "title": "Drive By",
     "author": "Train",
     "img": "../images/13.jpg",
-    "lyric":"../lyric/DriveBy.lrc",
+    "lyric":"/lyric/DriveBy.lrc",
     "time":"03:16"
 },
 {
@@ -35,7 +35,7 @@
     "title": "Everglow",
     "author": "Coldplay",
     "img": "../images/14.jpg",
-    "lyric":"../lyric/Everglow.lrc",
+    "lyric":"/lyric/Everglow.lrc",
     "time":"04:42"
 },
 {
@@ -43,7 +43,7 @@
     "title": "See You Again",
     "author": "Wiz Khalifa",
     "img": "../images/15.jpg",
-    "lyric":"../lyric/SeeYouAgain.lrc",
+    "lyric":"/lyric/SeeYouAgain.lrc",
     "time":"03:50"
 },
 {
@@ -51,6 +51,6 @@
     "title": "Wonderful U",
     "author": "AGA",
     "img": "../images/16.jpg",
-    "lyric":"../lyric/Wonderful.lrc",
+    "lyric":"/lyric/Wonderful.lrc",
     "time":"04:08"
 }]
