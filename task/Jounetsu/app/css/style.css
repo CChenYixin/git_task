@@ -283,6 +283,7 @@ input[type="search"]{
     margin-top: 10px;
     height: 350px;
 
+    text-align: center;
     border: 1px solid #666;
     border-left: none;
     border-right: none;
@@ -290,7 +291,12 @@ input[type="search"]{
     overflow-y:auto;
 
 }
-
+.lyric-area p{
+    color: #8d9093;
+    line-height: 2em;
+    font-weight: 400;
+    font-size: 14px;
+}
 .lyric-area::-webkit-scrollbar {
   width: 1px;
 }
