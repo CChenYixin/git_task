@@ -7,11 +7,12 @@ function $(selector){
 }
 
 /**
- * 对封装好的ajax进行调用
+ * 发送ajax获取歌曲资源
  */
 
 var xhr = new XMLHttpRequest();
 xhr.open('get', 'http://chenyixin.win/git_task/task/Jounetsu/app/html/music.json', true);
+// xhr.open('get', '/html/music.json', true);
 xhr.send();
 xhr.onload = function() {
     if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
@@ -36,6 +37,7 @@ audio.autoplay = true;
 function getMusicList(list){
     musicList = list;
     loadMusic(list[currentIndex]);
+    getLyric(list[currentIndex].lyric);
 }
 
 /**
@@ -43,7 +45,7 @@ function getMusicList(list){
  */
 
 function loadMusic(musicObject){
-    console.log('begin play',musicObject);
+    console.log('成功获取歌词资源并开始加载！');
     $('.song-name').innerText = musicObject.title;
     $('.song-author').innerText = musicObject.author;
     $('.song-img').src = musicObject.img;
@@ -51,6 +53,38 @@ function loadMusic(musicObject){
 
     audio.src = musicObject.src;
 }
+
+/**
+ * 获取歌词
+ */
+
+function getLyric(url){
+    console.log(url);
+    url = 'http://chenyixin.win/git_task/task/Jounetsu/app' + url;
+    console.log(url);
+    var request = new XMLHttpRequest();
+    request.open('GET',url,true);
+    if ((request.status >= 200 && request.status < 300) || request.status == 304) {
+        var lyric = request.response;
+        console.log(lyric);
+    }else{
+        console.log('获取歌词数据失败!');
+    }
+    request.send();
+}
+
+/**
+ * 解析歌词
+ */
+
+
+
+function loadMusicLyric(musicObject){
+
+
+}
+
+
 
 
 
@@ -137,7 +171,7 @@ $('.prevBtn').onclick = function(){
 function getAlbums(list){
     var albumBox = $('.albums-box');
     var cloneBox = albumBox.cloneNode(true);
-    console.log(cloneBox.children);
+    // console.log(cloneBox.children);
 
     var lis = [];
     for(var i=0;i<cloneBox.children.length;i++){
