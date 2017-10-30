@@ -20,7 +20,9 @@
             background-color: #eee;
             cursor: pointer;
         }
-
+        #test{
+            position: relative;
+        }
     </style>
 
 </head>
@@ -30,6 +32,21 @@
     <div id="test" class="test"></div>
     <button id="button1" type="button" name="button">click me!</button>
     <button id="button2" type="button" name="button">click me!</button>
+    <button id="button3" type="button" name="button">click me!</button>
+    <ul class="uls">
+        <li class="box lis">
+            <span>0</span>
+            <span>1</span>
+            <span>2</span>
+        </li>
+        <li class="box" id="box1">3</li>
+        <li class="box">4</li>
+        <li class="box">5</li>
+        <li class="box">6</li>
+        <li class="box">7</li>
+    </ul>
+
+
 
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
@@ -39,6 +56,30 @@
             // console.log(1);
             $test.css('backgroundColor','gray');
         })
+
+
+
+
+
+        var action = [
+            {width:80,height:80,left:0,top:0},
+            {left:'200px'},
+            {top:'200px'},
+            {left:'0px'},
+            {top:'0px'},
+            {width:80,height:80},
+        ]
+
+
+
+        $('#button3').on('click',function() {
+            action.forEach(function(action,id) {
+                $('#test').animate(action)
+            })
+        })
+
+
+
 
     </script>
 

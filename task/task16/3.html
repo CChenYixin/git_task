@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style media="screen">
+        .layout {
+            width: 600px;
+            overflow: hidden;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .title li {
+            float: left;
+            border: 1px solid #ccc;
+            width: 178px;
+            padding: 10px;
+        }
+
+        .claerfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .content {
+            position: relative;
+            width: 1800px;
+            height: 200px;
+            border-top: none;
+        }
+
+        .content li {
+            width: 600px;
+            height: 200px;
+            float: left;
+            background-color: #333;
+        }
+
+        .content li:nth-child(1) {
+            background-color: #eee;
+        }
+
+        .content li:nth-child(2) {
+            background-color: #999;
+        }
+
+        .content li:nth-child(3) {
+            background-color: #666;
+        }
+
+        .active {
+            background: #ccc;
+            color: #fff;
+        }
+    </style>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+</head>
+
+<body>
+    <div class="layout">
+        <ul class="title claerfix">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <ul class="content">
+            <li>哈哈哈</li>
+            <li>呵呵呵</li>
+            <li>哦哦哦</li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $('.title li').on('click', function() {
+            var $this = $(this);
+            var idex = $this.index()
+            console.log(idex);
+            $this.siblings().removeClass("active");
+            $this.addClass('active');
+            $('.content').animate({
+                'right': ( idex * 600) + 'px'
+            })
+        })
+    </script>
+</body>
+
+</html>
