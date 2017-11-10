@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style media="screen">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            padding: 30px;
+
+        }
+        ul{
+            list-style-type: none;
+            margin: 0 auto;
+            width: 96%;
+        }
+        li{
+            margin-bottom: 10px;
+            padding: 0 20px;
+
+            height: 40px;
+            line-height: 40px;
+
+            border: 1px solid #222;
+            border-radius: 5px;
+        }
+        li:hover{
+            background-color: #222;
+            color: #fff;
+        }
+
+        button{
+            margin: 0 auto;
+            display: block;
+
+            width: 200px;
+            height: 40px;
+
+            background-color: #222;
+            color: #fff;
+            outline: 0;
+
+            border: 1px solid black;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 2px;
+
+            cursor: pointer;
+        }
+        button:hover{
+            box-shadow: 1px 5px 5px #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="ct">
+            <li>内容1</li>
+            <li>内容2</li>
+        </ul>
+
+        <button type="button" name="button">加载更多</button>
+    </div>
+
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        var $button = $('button');
+        var idx = 0,
+            len = 3;
+
+
+        $button.on('click',function(){
+            $.get({
+                url:'getNews',
+                method:'get',
+                dataType:'JSON',
+                data:{
+                    index:idx,
+                    length:len
+                }
+            }).done(function(data){
+
+                if(data.status === 0){
+                    console.log(data);
+                    idx += 3;
+                    appendHTML(data);
+                }else{
+                    console.log('出问题了！');
+                }
+
+
+            }).fail(function(){
+                console.log('数据获取失败!')
+            })
+
+            function appendHTML(data){
+                for(var i in data){
+                    $('ul').append('<li>' + data[i] + '</li>');
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>

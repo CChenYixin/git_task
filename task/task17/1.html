@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style media="screen">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html{
+            font-size: 16px;
+            padding: 50px;
+        }
+        h2{
+            font-size: 16px;
+            font-weight: normal;
+            margin-top: 50px;
+        }
+        button{
+            margin-top: 10px;
+
+            width: 100px;
+            height: 20px;
+
+            border: 1px solid black;
+            outline: 0;
+            background-color: #fff;
+            border-radius: 2px;
+            cursor: pointer;
+
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+        .scroll,input,select,p:last-of-type{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>当点击$btn 时，让 $btn 的背景色变为红色再变为蓝色</h2>
+    <button type="button" name="button">点击变换颜色</button>
+
+    <h2>当窗口滚动时，获取垂直滚动距离</h2>
+    <div class="scroll">
+        <p>div的垂直滚动距离为:<span>0px</span>。</p>
+    </div>
+
+    <h2>当鼠标放置到$div 上，把$div 背景色改为红色，移出鼠标背景色变为白色</h2>
+    <div class="box">
+
+    </div>
+
+    <h2>当鼠标激活 input 输入框时让输入框边框变为蓝色，当输入框内容改变时把输入框里的文字小写变为大写，当输入框失去焦点时去掉边框蓝色，控制台展示输入框里的文字</h2>
+    <input type="text" name="" value="">
+
+    <h2>当选择 select 后，获取用户选择的内容</h2>
+    <select class="select" name="hobby">
+        <option value="1" >美术</option>
+        <option value="2" selected>舞蹈</option>
+        <option value="3">画画</option>
+        <option value="4">体育</option>
+    </select>
+    <p>用户选择的内容是：<span class="span"></span>。</p>
+
+
+
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('button').on('click',function(){
+                var $this = $(this);
+                $this.css({
+                    'background-color':'red',
+                    'border-color':'red',
+                    'color':'white'
+                });
+                setTimeout(function(){
+                    $this.css({
+                        'background-color':'blue',
+                        'border-color':'blue',
+                        'color':'white'
+                    })
+                },500)
+            })
+
+            $(window).on('scroll',function() {
+                $('.scroll span').text($(window).scrollTop()+'px');
+            })
+
+            $('div.box').on({
+                mouseenter:function () {
+                    $(this).css('background-color','red');
+                },
+                mouseleave:function(){
+                    $(this).css('background-color','');
+                }
+            })
+
+
+            $('input').on({
+                focus: function(){
+                    $(this).css('outlineColor','blue');
+                },
+                keydown:function() {
+                    $(this).val($(this).val().toUpperCase());
+                },
+                focusout:function(e){
+                    e.stopPropagation();
+                    console.log($(this).val());
+                }
+
+            })
+
+            $('select').on('change',function() {
+                $('.span').text($('select option:selected').text());
+            })
+
+        })
+
+    </script>
+</body>
+</html>
