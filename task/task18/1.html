@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style media="screen">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width:850px;
+            margin: 20px auto;
+        }
+        img{
+            width: 400px;
+            height: 300px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img data-src="https://picsum.photos/400/300/?image=51" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=52" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=53" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=54" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=55" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=56" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=57" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=58" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=59" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=10" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=11" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=12" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=13" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=14" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=15" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=16" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=17" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=18" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=19" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=20" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=21" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=22" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=23" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=24" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=25" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=26" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=27" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=28" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=29" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=30" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=31" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=32" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=33" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=34" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=35" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=36" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=37" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=38" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=39" alt="" src="1.gif">
+        <img data-src="https://picsum.photos/400/300/?image=40" alt="" src="1.gif">
+    </div>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+    startImg();
+
+    $(window).on('scroll',function(){
+        startImg();
+    })
+
+    function startImg() {
+        $('.container img').not('[data-isLoaded]').each(function() {
+            console.log(1);
+            var $node = $(this);
+            if(isShow($node)){
+                setTimeout(function(){
+                    loadImg($node);
+                },500)
+            }
+        })
+    }
+
+    function isShow($node){
+        var offsetTop = $node.offset().top,
+            nodeHeight = $(window).height(),
+            scrollTop = $(window).scrollTop();
+
+        return offsetTop <= nodeHeight + scrollTop;
+    }
+
+    function loadImg($img) {
+        $img.attr('src',$img.attr('data-src'));
+        $img.attr('data-isLoaded',true);
+    }
+
+
+
+
+
+</script>
+</body>
+</html>
