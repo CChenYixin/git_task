@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style media="screen">
+        .content{
+            position: relative;
+        }
+        .item{
+            position: absolute;
+            width: 200px;
+            margin: 5px;
+            transition: all 1s;
+        }
+        .type1{
+            height: 200px;
+            background-color: #222;
+        }
+        .type2{
+            height: 300px;
+            background-color: #555;
+        }
+        .type3{
+            height: 400px;
+            background-color: #eee;
+        }
+        .type4{
+            height: 500px;
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="item type1">1</div>
+        <div class="item type2">2</div>
+        <div class="item type1">3</div>
+        <div class="item type3">4</div>
+        <div class="item type2">5</div>
+        <div class="item type1">6</div>
+        <div class="item type3">7</div>
+        <div class="item type4">8</div>
+        <div class="item type1">9</div>
+        <div class="item type4">10</div>
+        <div class="item type2">11</div>
+        <div class="item type3">12</div>
+        <div class="item type1">13</div>
+        <div class="item type3">14</div>
+        <div class="item type4">15</div>
+    </div>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+    var water = (function() {
+
+        function render() {
+            var nodeWidth = $('.item').outerWidth(true),
+                colNum = parseInt( $(window).width() / nodeWidth ),
+                colSumHeight = [];
+
+            for(var i = 0; i < colNum; i++){
+                colSumHeight.push(0);
+            }
+
+            $('.item').each(function() {
+                // var $cur = $(this);
+                //
+                // var idx = 0,
+                //     minSumHeight = colSumHeight[0];
+                //
+                // for (var i = 0; i < colSumHeight.length; i++) {
+                //     if (colSumHeight[i] < minSumHeight) {
+                //         idx = i;
+                //         minSumHeight = colSumHeight[i];
+                //         console.log(minSumHeight)
+                //     }
+                // }
+                //
+                // $cur.css({
+                //     left: nodeWidth * idx,
+                //     top: minSumHeight
+                // })
+                var minValue = Math.min.apply(null,colSumHeight),
+                    minIndex = colSumHeight.indexOf(minValue);
+
+                $(this).css({
+                    top: colSumHeight[minIndex],
+                    left: $(this).outerWidth(true) * minIndex
+                })
+
+            colSumHeight[minIndex] += $(this).outerHeight(true);
+
+            });
+        }
+
+        render();
+
+        $(window).on('resize',function() {
+            render();
+        })
+
+        return {
+            init: render
+        }
+    })();
+
+
+    water.init();
+
+
+
+
+
+
+</script>
+</body>
+</html>
